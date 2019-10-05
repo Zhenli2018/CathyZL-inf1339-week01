@@ -14,8 +14,9 @@
         .sevenSegmentTable {color: white; border-color: white;
                             border: solid; border-collapse: collapse;}
         .notsevenSegmentTable {border: none;}
-        .horizontal {width: 40px; height: 10px;}
-        .vertical {width: 10px; height: 40px;}
+        .horizontal {width: 40px; height:10px;}
+        .vertical {width: 10px; height:40px;}
+        .red {background-color:red;}
                  
     </style>
     <script>
@@ -59,8 +60,10 @@
         function illuminate(signals) {
             document.getElementById("segments").innerHTML = signals
             if (signals[0] == '1') {
-                document.getElementById("segmentA").innerHTML ='ON'}
-            else {document.getElementById("segmentA").innerHTML =''}
+                document.getElementById("segmentA").innerHTML ='ON'
+                document.getElementById("segmentA").setAttribute("class", "red")}
+            else {document.getElementById("segmentA").innerHTML =''
+                 document.getElementById("segmentA").setAttribute("class", "black")}
             if (signals[1] == '1') {
                 document.getElementById("segmentB").innerHTML ='ON'}
             else {document.getElementById("segmentB").innerHTML =''}
@@ -91,7 +94,7 @@
     </script>
     </head>
     <body>
-        <h2>Version 9e</h2>
+        <h2>Version 09f</h2>
         <table class="standardTable">
             <tr>
                 <td class="blackbox"><h3>Keypad</h3>
@@ -131,30 +134,30 @@
                 <table>
                         <tr>
                             <td class="notsevenSegmentTable">1</td>
-                            <td id="segmentA" class="sevenSegmentTable">A</td>
+                            <td id="segmentA" class="sevenSegmentTable horizontal">A</td>
                             <td class="notsevenSegmentTable">3</td>
                         </tr>
                         <tr>
-                            <td id="segmentF" class="sevenSegmentTable">F</td>
+                            <td id="segmentF" class="sevenSegmentTable vertical">F</td>
                             <td class="notsevenSegmentTable">2</td>
-                            <td id="segmentB" class="sevenSegmentTable">B</td>
+                            <td id="segmentB" class="sevenSegmentTable vertical">B</td>
                         </tr>
                         <tr>
                             <td class="notsevenSegmentTable">1</td>
-                            <td id="segmentG" class="sevenSegmentTable">G</td>
+                            <td id="segmentG" class="sevenSegmentTable horizontal">G</td>
                             <td class="notsevenSegmentTable">3</td>
                         </tr>
                         <tr>
                             <td id="segmentE"
-                                class="sevenSegmentTable">E</td>
+                                class="sevenSegmentTable vertical">E</td>
                             <td class="notsevenSegmentTable">2</td>
                             <td id="segmentC"
-                                class="sevenSegmentTable">C</td>
+                                class="sevenSegmentTable vertical">C</td>
                         </tr>
                         <tr>
                             <td class="notsevenSegmentTable">1</td>
                             <td id="segmentD"
-                                class="sevenSegmentTable">D</td>
+                                class="sevenSegmentTable horizontal">D</td>
                             <td class="notsevenSegmentTable">3</td>
                         </tr>
                     </table>
