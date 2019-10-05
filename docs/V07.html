@@ -10,33 +10,30 @@
                   background-color: black;
                   border-color: white;
                   color:yellow;
-                  vertical-align: top;}
+             vertical-align: top;
+                }
     </style>
     <script>
         function display(number) {                                
         document.getElementById("decimal_input").innerHTML=number 
-
-                        var bin = dec2bin(number)
+            var bin = dec2bin(number)
         document.getElementById("binary_output").innerHTML=bin
-            //
-        document.getElementById("bin2ssd_input").innerHTML=bin
-        var ssd=bin2ssd(bin)
-        document.getElementById('bin2ssd_output').innerHTML=ssd
-          //                    
-       // document.getElementById("illuminate_input").innerHTML=ssd illuminate(ssd)
-         document.getElementById('illuminate_output').innerHTML='done'
-            
-        }                    
-        function dec2bin(decimal){
-            binary = ['0000','0001','0010','0011',
-                      '0100','0101','0110','0111',
-                      '1000','1001']
+        }
+        
+        
+        function dec2bin (decimal) {
+            binary = ["0000","0001","0010","0011",
+                      "0100","0101","0110","0111",
+                      "1000","1001"]
             return(binary[decimal])
         }
+        
+        
+     
     </script>
     </head>
     <body>
-        <h2>Version 7 Adding Input Keypad</h2>
+        <h2>Version 6 Adding Decimal to Binary Conversion</h2>
         <table class="standardTable">
             <tr>
                 <td class="blackbox"><h3>Keypad</h3>
